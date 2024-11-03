@@ -1,53 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { IoMdSearch } from 'react-icons/io'
 import {FaCaretDown, FaCartShopping} from "react-icons/fa6"
 import DarkMode from './DarkMode'
-const MenuLinks = [
-    {
-        id:1,
-        name: "Home",
-        link: "/#",
-    },
-    {
-        id:2,
-        name: "Shop",
-        link: "/#shop",
-    },
-    {
-        id:3,
-        name: "About",
-        link: "/#about",
-    },
-    {
-        id:4,
-        name: "Blogs",
-        link: "/#blog",
-    },
-]
 
-const DropdownLinks = [
-    {
-        id: 1,
-        name: "Trending Products",
-        link: "/#",
-    },
-    {
-        id: 2,
-        name: "Best Seller",
-        link: "/#",
-    },
-    {
-        id: 3,
-        name: "Top Rated",
-        link: "/#",
-    },
-]
+const MENU_LINKS = [
+    { id: 1, name: "Home", link: "/#" },
+    { id: 2, name: "Shop", link: "/#shop" },
+    { id: 3, name: "About", link: "/#about" },
+    { id: 4, name: "Blogs", link: "/#blog" },
+  ];
+  
+  const DROPDOWN_LINKS = [
+    { id: 1, name: "Trending Products", link: "/#" },
+    { id: 2, name: "Best Seller", link: "/#" },
+    { id: 3, name: "Top Rated", link: "/#" },
+  ];
 
 const Navbar = () => {
+
+    const [isBlurred, setIsBlurred] = useState(false);
+
+    const handleScroll = useCallback(() => {
+      setIsBlurred(window.scrollY > 50);
+    }, []);
+  
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, [handleScroll]);
+
+    
   return (
-    <div className="bg-white 
-     dark:bg-gray-900
-     dark:text-white duration-200 relative z-40"
+    <nav
+    className={`fixed top-0 left-0 w-full z-40 transition duration-300 ${
+        isBlurred ? 'backdrop-blur-md bg-white/70 dark:bg-gray-900/70' : 'bg-white dark:bg-gray-900'
+      }`}
      >
         <div className="py-4">
             <div className="container flex justify-between
@@ -67,7 +54,7 @@ const Navbar = () => {
                     <div className="hidden lg:block">
                         <ul className="flex items-center gap-4">
                             {
-                                MenuLinks.map((data, index) => (
+                                MENU_LINKS.map((data, index) => (
                                     <li key={index}>
                                         <a href={data.link}
                                         className="inline-block px-4 font-semibold
@@ -94,8 +81,8 @@ const Navbar = () => {
                                         dark:text-white">
                                             <ul className="space-y-2">
                                                 {
-                                                    DropdownLinks.map((data, index) => (
-                                                        <li>
+                                                    DROPDOWN_LINKS.map((data, index) => (
+                                                        <li key={index}>
                                                             <a
                                                             className="text-gray-500
                                                             hover:text-black dark:hover:text-white
@@ -149,7 +136,7 @@ const Navbar = () => {
 
             </div>
         </div>
-    </div>
+    </nav>
   );
 }
 

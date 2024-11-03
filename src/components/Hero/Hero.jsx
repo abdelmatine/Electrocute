@@ -17,17 +17,17 @@ const HeroData = [
     {
         id:2,
         img: Image2,
-        subtitle: "Beats Solo",
+        subtitle: "VR",
         title: "Branded",
-        title2: "Laptops",
+        title2: "APPLE",
         description:"Some description bla bla bla",
     },
     {
         id:3,
         img: Image3,
-        subtitle: "Beats Solo",
-        title: "Wireless",
-        title2: "Headphone",
+        subtitle: "ASUS",
+        title: "Samurai",
+        title2: "Laptops",
         description:"Some description bla bla bla",
     },
 ]
@@ -35,6 +35,7 @@ const HeroData = [
 const Hero = () => {
 
     const settings = {
+        autoplay: true,
         dots: true,
         infinite: true,
         speed: 500,
