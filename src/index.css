@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply bg-white;
+  }
+  
+  html.dark {
+    @apply bg-gray-900;
+  }
+
 @layer components {
     .search-bar{
         @apply w-0 group-hover:w-[300px] transition-all duration-300

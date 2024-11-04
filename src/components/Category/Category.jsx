@@ -32,7 +32,7 @@ const categories = [
   },
   {
     id: 3,
-    title: 'Laptop',
+    title: 'Laptops',
     gradientFrom: 'from-primary',
     gradientTo: 'to-primary/90',
     textOpacity: 'opacity-40',
@@ -44,37 +44,37 @@ const categories = [
   },
   {
     id: 4,
-    title: 'Laptop',
+    title: 'Consoles',
     gradientFrom: 'from-gray-400/90',
     gradientTo: 'to-gray-100',
     textOpacity: 'opacity-40',
     imgSrc: Image4,
     imgClass: 'w-[250px] absolute top-1/2 -translate-y-1/2 -right-0',
-    buttonBg: 'bg-white',
-    buttonText: 'text-primary',
+    buttonBg: 'bg-primary',
+    buttonText: 'text-white',
     span: 'col-span-2',
   },
   {
     id: 5,
-    title: 'Earphone',
+    title: 'VRs',
     gradientFrom: 'from-brandGreen/90',
     gradientTo: 'to-brandGreen/70',
     textOpacity: 'opacity-20',
     imgSrc: Image5,
     imgClass: 'w-[320px] absolute bottom-0',
     buttonBg: 'bg-white',
-    buttonText: 'text-white',
+    buttonText: 'text-brandGreen',
   },
   {
     id: 6,
-    title: 'Earphone',
-    gradientFrom: 'from-black/90',
-    gradientTo: 'to-black/70',
+    title: 'Speakers',
+    gradientFrom: 'from-brandBlue',
+    gradientTo: 'to-brandBlue/90',
     textOpacity: 'opacity-20',
     imgSrc: Image6,
-    imgClass: 'w-[320px] absolute bottom-0',
+    imgClass: 'w-[320px] absolute bottom-0', // Shift the image slightly out of the container
     buttonBg: 'bg-white',
-    buttonText: 'text-white',
+    buttonText: 'text-brandBlue',
   },
 ];
 
@@ -86,9 +86,10 @@ const Category = () => {
           {categories.map((category) => (
             <div
               key={category.id}
-              className={`py-10 pl-5 bg-gradient-to-br ${category.gradientFrom} ${category.gradientTo} text-white rounded-3xl relative h-[320px] flex items-end ${category.span || ''}`}
+              className={`relative overflow-visible py-10 pl-5 bg-gradient-to-br ${category.gradientFrom} ${category.gradientTo} text-white rounded-3xl h-[320px] flex items-center ${category.span || ''}`}
             >
-              <div className="mb-4">
+              {/* Content Container */}
+              <div className="absolute top-2/3 left-5 transform -translate-y-1/2 z-10">
                 <p className="mb-1 text-gray-400">Enjoy</p>
                 <p className="text-2xl font-semibold mb-1">With</p>
                 <p className={`text-4xl xl:text-5xl font-bold ${category.textOpacity} mb-2`}>
@@ -96,7 +97,9 @@ const Category = () => {
                 </p>
                 <Button text="Browse" bgColor={category.buttonBg} textColor={category.buttonText} />
               </div>
-              <img src={category.imgSrc} alt={category.title} className={category.imgClass} />
+              
+              {/* Image */}
+              <img src={category.imgSrc} alt={category.title} className={`${category.imgClass} z-0`} />
             </div>
           ))}
         </div>

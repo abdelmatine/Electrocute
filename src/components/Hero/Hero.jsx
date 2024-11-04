@@ -26,7 +26,7 @@ const HeroData = [
         id:3,
         img: Image3,
         subtitle: "ASUS",
-        title: "Samurai",
+        title: "ROG Zephyrus",
         title2: "Laptops",
         description:"Some description bla bla bla",
     },
