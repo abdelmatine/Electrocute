@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import Services from './components/Services/Services'
 import Banner from './components/Banner/Banner'
 import headphone from "./assets/hero/headphone.png"
+import Products from './components/Products/Products'
 
 const BannerData={
   discount:"30% OFF",
@@ -27,6 +28,7 @@ const App = () => {
       <Category/>
       <Services/>
       <Banner data={BannerData}/>
+      <Products/>
     </div>
   )
 }
