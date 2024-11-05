@@ -18,6 +18,7 @@ const categories = [
     imgClass: 'w-[320px] absolute bottom-0',
     buttonBg: 'bg-primary',
     buttonText: 'text-white',
+
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ const categories = [
     imgClass: 'w-[320px] absolute -right-4 lg:top-[40px]',
     buttonBg: 'bg-white',
     buttonText: 'text-brandYellow',
+
   },
   {
     id: 3,

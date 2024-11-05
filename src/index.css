@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+/* html {
     @apply bg-white;
   }
   
   html.dark {
     @apply bg-gray-900;
-  }
+  } */
 
 @layer components {
     .search-bar{
