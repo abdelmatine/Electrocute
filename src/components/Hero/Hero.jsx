@@ -75,7 +75,7 @@ const Hero = () => {
                                 </div>
                                 {/* Img section  */}
                                 <div className="order-1 sm:order-2">
-                                    <div>
+                                    <div className="hover:scale-105 duration-500">
                                         <img src={data.img} alt="" 
                                         className="w-[300px] sm:w-[450px] h-[300px] sm:h-[450px]
                                         sm:scale-105 lg:scale-110 object-contain

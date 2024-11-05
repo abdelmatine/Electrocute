@@ -8,7 +8,7 @@ const ProductCard = ({ data }) => {
       gap-5 place-items-center">
         {
             data.map((data) => (
-                <div className="group" key={data.id}>
+                <div className="group hover:scale-105 duration-500" key={data.id}>
                     <div className="relative">
                         <img src={data.img} alt="" 
                         className="h-[180px] w-[260px] object-cover

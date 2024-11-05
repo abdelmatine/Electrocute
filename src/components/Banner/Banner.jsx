@@ -15,7 +15,7 @@ const Banner = ({data}) => {
                 <p className="text-sm">{data.date}</p>
             </div>
             {/* 2nd col  */}
-            <div>
+            <div className="hover:scale-105 duration-500">
             <img src={data.image} alt="" className="scale-125 w-[250px]
             md:w-[340px] mx-auto drop-shadow-2xl object-cover"
             />
@@ -30,7 +30,7 @@ const Banner = ({data}) => {
                   <button 
                   style={{color: data.bgColor}}
                   className="bg-white py-2
-                  px-4 rounded-full">Shop Now</button>
+                  px-4 rounded-full hover:scale-105 duration-500">Shop Now</button>
                 </div>
             </div>
         </div>

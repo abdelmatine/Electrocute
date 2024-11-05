@@ -88,7 +88,7 @@ const Category = () => {
           {categories.map((category) => (
             <div
               key={category.id}
-              className={`relative overflow-visible py-10 pl-5 bg-gradient-to-br ${category.gradientFrom} ${category.gradientTo} text-white rounded-3xl h-[320px] flex items-center ${category.span || ''}`}
+              className={`hover:scale-105 duration-500 relative overflow-visible py-10 pl-5 bg-gradient-to-br ${category.gradientFrom} ${category.gradientTo} text-white rounded-3xl h-[320px] flex items-center ${category.span || ''}`}
             >
               {/* Content Container */}
               <div className="absolute top-2/3 left-5 transform -translate-y-1/2 z-10">
@@ -101,7 +101,7 @@ const Category = () => {
               </div>
               
               {/* Image */}
-              <img src={category.imgSrc} alt={category.title} className={`${category.imgClass} z-0`} />
+              <img src={category.imgSrc} alt={category.title} className={`${category.imgClass} z-0 hover:scale-105 duration-500`} />
             </div>
           ))}
         </div>
