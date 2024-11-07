@@ -18,6 +18,7 @@ const categories = [
     imgClass: 'w-[320px] absolute bottom-0',
     buttonBg: 'bg-primary',
     buttonText: 'text-white',
+    aosDelay: "0",
 
   },
   {
@@ -30,6 +31,7 @@ const categories = [
     imgClass: 'w-[320px] absolute -right-4 lg:top-[40px]',
     buttonBg: 'bg-white',
     buttonText: 'text-brandYellow',
+    aosDelay: "200",
 
   },
   {
@@ -43,6 +45,8 @@ const categories = [
     buttonBg: 'bg-white',
     buttonText: 'text-primary',
     span: 'col-span-2',
+    aosDelay: "400",
+
   },
   {
     id: 4,
@@ -55,6 +59,8 @@ const categories = [
     buttonBg: 'bg-primary',
     buttonText: 'text-white',
     span: 'col-span-2',
+    aosDelay: "600",
+
   },
   {
     id: 5,
@@ -66,6 +72,8 @@ const categories = [
     imgClass: 'w-[320px] absolute bottom-0',
     buttonBg: 'bg-white',
     buttonText: 'text-brandGreen',
+    aosDelay: "800",
+
   },
   {
     id: 6,
@@ -77,6 +85,8 @@ const categories = [
     imgClass: 'w-[320px] absolute bottom-0', // Shift the image slightly out of the container
     buttonBg: 'bg-white',
     buttonText: 'text-brandBlue',
+    aosDelay: "1000",
+
   },
 ];
 
@@ -87,11 +97,14 @@ const Category = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category) => (
             <div
+            data-aos="fade-up"
+            data-aos-delay={category.aosDelay}
               key={category.id}
               className={`hover:scale-105 duration-500 relative overflow-visible py-10 pl-5 bg-gradient-to-br ${category.gradientFrom} ${category.gradientTo} text-white rounded-3xl h-[320px] flex items-center ${category.span || ''}`}
             >
               {/* Content Container */}
-              <div className="absolute top-2/3 left-5 transform -translate-y-1/2 z-10">
+              <div 
+               className="absolute top-2/3 left-5 transform -translate-y-1/2 z-10">
                 <p className="mb-1 text-gray-400">Enjoy</p>
                 <p className="text-2xl font-semibold mb-1">With</p>
                 <p className={`text-4xl xl:text-5xl font-bold ${category.textOpacity} mb-2`}>

@@ -29,7 +29,7 @@ const Footer = () => {
             {/* company details */}
             <div className="py-8 px-4">
             <a href="#"
-                    className="text-primary font-semibold 
+                    className="text-primary font-semibold
                     tracking-widest text-2xl uppercase sm:text-3xl">
                         Electrocute
                     </a>
@@ -43,7 +43,7 @@ const Footer = () => {
                     href="https://github.com/abdelmatine"
                     target="_blank"
                     className="inline-block bg-primary/90 text-white
-                    py-2 px-4 mt-4 text-sm rounded-full"
+                    py-2 px-4 mt-4 text-sm rounded-full hover:scale-105 duration-500"
                     >
                         Visit Our Github Page
                     </a>
@@ -116,15 +116,16 @@ const Footer = () => {
                         <div className="flex items-center gap-3 mt-6">
                             <a href="#">
                                 <FaInstagram className="
-                                text-3xl hover:text-primary duration-200"/>
+                                text-3xl hover:text-primary
+                                hover:scale-125 duration-500"/>
                             </a>
                             <a href="#">
                                 <FaFacebookF className="
-                                text-3xl hover:text-primary duration-200"/>
+                                text-3xl hover:text-primary hover:scale-125 duration-500"/>
                             </a>
                             <a href="#">
                                 <FaLinkedin className="
-                                text-3xl hover:text-primary duration-200"/>
+                                text-3xl hover:text-primary hover:scale-125 duration-500"/>
                             </a>
                         </div>
                     </div>

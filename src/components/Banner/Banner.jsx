@@ -9,13 +9,13 @@ const Banner = ({data}) => {
         items-center text-white rounded-3xl">
             {/* first col  */}
             <div className="p-6 sm:p_8">
-                <p className="text-sm">{data.discount}</p>
-                <h1 className="uppercase text-4xl lg:text-7xl
+                <p data-aos="slide-right" className="text-sm">{data.discount}</p>
+                <h1 data-aos="zoom-out" className="uppercase text-4xl lg:text-7xl
                 font-bold">{data.title}</h1>
-                <p className="text-sm">{data.date}</p>
+                <p data-aos="fade-up" className="text-sm">{data.date}</p>
             </div>
             {/* 2nd col  */}
-            <div className="hover:scale-105 duration-500">
+            <div data-aos="zoom-in" className="hover:scale-105 duration-500">
             <img src={data.image} alt="" className="scale-125 w-[250px]
             md:w-[340px] mx-auto drop-shadow-2xl object-cover"
             />
@@ -23,10 +23,12 @@ const Banner = ({data}) => {
             {/* 3rd col  */}
             <div className="flex flex-col justify-center gap-4 p-6
             sm:p-8">
-                <p className="font-bold text-xl">{data.title2}</p>
-                <p className="text-3xl sm:text-5xl font-bold">{data.title3}</p>
-                <p className="text-sm tracking-wide leading-5">{data.description}</p>
-                <div>
+                <p data-aos="zoom-out" className="font-bold text-xl">{data.title2}</p>
+                <p data-aos="fade-up" className="text-3xl sm:text-5xl font-bold">{data.title3}</p>
+                <p data-aos="fade-up" className="text-sm tracking-wide leading-5">{data.description}</p>
+                <div
+                 data-aos="fade-up"
+                 data-aos-offset="0">
                   <button 
                   style={{color: data.bgColor}}
                   className="bg-white py-2

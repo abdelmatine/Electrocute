@@ -13,6 +13,7 @@ const BlogData = [
         subtitle: "description description description bla bla bla",
         published: "Jan 20, 2024 By 3ezdinne",
         image: Img1,
+        aosDelay: "0",
     },
     {
         id:2,
@@ -20,6 +21,8 @@ const BlogData = [
         subtitle: "description description description bla bla bla",
         published: "Jan 28, 2024 By Alonzo",
         image: Img2,
+        aosDelay: "200",
+
     },
     {
         id:3,
@@ -27,6 +30,8 @@ const BlogData = [
         subtitle: "description description description bla bla bla",
         published: "Jan 30, 2024 By Jidane",
         image: Img3,
+        aosDelay: "400",
+
     },
 ]
 
@@ -43,7 +48,10 @@ const Blogs = () => {
         {/* Bloc Card  */}
         {
             BlogData.map((data) => (
-                <div className="bg-white dark:bg-gray-900" key={data.id}>
+                <div 
+                data-aos="fade-up"
+                data-aos-delay={data.aosDelay}
+                className="bg-white dark:bg-gray-900" key={data.id}>
                     {/* Image section  */}
                     <div className="overflow-hidden rounded-2xl
                     mb-2">

@@ -29,11 +29,12 @@ const Cart = ({orderPopup, handleOrderPopup}) => {
             className='form-input'/>
             <input type="text" placeholder="Address"
             className='form-input'/>
-            <div>
+            <div className="justify-center flex">
                 <Button
                 text="Order Now"
                 bgColor={"bg-primary"}
                 textColor={"text-white"}
+                
                 />
             </div>
           </div>
