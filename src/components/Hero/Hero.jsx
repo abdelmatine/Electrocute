@@ -32,7 +32,7 @@ const HeroData = [
     },
 ]
 
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
 
     const settings = {
         autoplay: true,
@@ -40,7 +40,10 @@ const Hero = () => {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        cssEase: "ease-in-out",
+        pauseOnHover: true,
+        pauseOnFocus: true,
     };
 
   return (
@@ -70,6 +73,7 @@ const Hero = () => {
                                         text="Shop By Category"
                                         bgColor="bg-primary"
                                         textColor="text-white"
+                                        handler={handleOrderPopup}
                                         />
                                     </div>
                                 </div>

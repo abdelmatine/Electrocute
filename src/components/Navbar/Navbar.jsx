@@ -16,7 +16,7 @@ const MENU_LINKS = [
     { id: 3, name: "Top Rated", link: "/#" },
   ];
 
-const Navbar = () => {
+const Navbar = ({handleOrderPopup}) => {
 
     const [isBlurred, setIsBlurred] = useState(false);
 
@@ -119,7 +119,8 @@ const Navbar = () => {
                         />
                     </div>
                     {/* Order btn section */}
-                    <button className="relative p-3">
+                    <button className="relative p-3"
+                    onClick={handleOrderPopup}>
                         <FaCartShopping className="text-xl text-gray-600
                         dark:text-gray-400"/>
                         <div className="w-4 h-4 bg-red-500 text-white
