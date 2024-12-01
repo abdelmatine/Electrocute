@@ -1,0 +1,83 @@
+import Image1 from "/assets/category/earphone.png";
+import Image2 from "/assets/category/watch.png";
+import Image3 from "/assets/category/macbook.png";
+import Image4 from "/assets/category/gaming.png";
+import Image5 from "/assets/category/vr.png";
+import Image6 from "/assets/category/speaker.png";
+
+export const categories = [
+  {
+    id: 1,
+    title: 'Earphone',
+    gradientFrom: 'from-black/90',
+    gradientTo: 'to-black/70',
+    textOpacity: 'opacity-20',
+    imgSrc: Image1,
+    imgClass: 'w-[320px] absolute bottom-0',
+    buttonBg: 'bg-primary',
+    buttonText: 'text-white',
+    aosDelay: "0",
+  },
+  {
+    id: 2,
+    title: 'Gadget',
+    gradientFrom: 'from-brandYellow',
+    gradientTo: 'to-brandYellow/90',
+    textOpacity: 'opacity-40',
+    imgSrc: Image2,
+    imgClass: 'w-[320px] absolute -right-4 lg:top-[40px]',
+    buttonBg: 'bg-white',
+    buttonText: 'text-brandYellow',
+    aosDelay: "200",
+  },
+  {
+    id: 3,
+    title: 'Laptops',
+    gradientFrom: 'from-primary',
+    gradientTo: 'to-primary/90',
+    textOpacity: 'opacity-40',
+    imgSrc: Image3,
+    imgClass: 'w-[250px] absolute top-1/2 -translate-y-1/2 -right-0',
+    buttonBg: 'bg-white',
+    buttonText: 'text-primary',
+    span: 'col-span-2',
+    aosDelay: "400",
+  },
+  {
+    id: 4,
+    title: 'Consoles',
+    gradientFrom: 'from-gray-400/90',
+    gradientTo: 'to-gray-100',
+    textOpacity: 'opacity-40',
+    imgSrc: Image4,
+    imgClass: 'w-[250px] absolute top-1/2 -translate-y-1/2 -right-0',
+    buttonBg: 'bg-primary',
+    buttonText: 'text-white',
+    span: 'col-span-2',
+    aosDelay: "600",
+  },
+  {
+    id: 5,
+    title: 'VRs',
+    gradientFrom: 'from-brandGreen/90',
+    gradientTo: 'to-brandGreen/70',
+    textOpacity: 'opacity-20',
+    imgSrc: Image5,
+    imgClass: 'w-[320px] absolute bottom-0',
+    buttonBg: 'bg-white',
+    buttonText: 'text-brandGreen',
+    aosDelay: "800",
+  },
+  {
+    id: 6,
+    title: 'Speakers',
+    gradientFrom: 'from-brandBlue',
+    gradientTo: 'to-brandBlue/90',
+    textOpacity: 'opacity-20',
+    imgSrc: Image6,
+    imgClass: 'w-[320px] absolute bottom-0',
+    buttonBg: 'bg-white',
+    buttonText: 'text-brandBlue',
+    aosDelay: "1000",
+  },
+];
